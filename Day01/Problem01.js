@@ -7,8 +7,14 @@ class Problem {
      */
     wordCount(input) {
         // code goes here
-        return null;
-    }
+        
+            let string = input.split(" ");  //split the word into strings
+            let wordLength = string.length; //count the lenght of string 
+
+            return wordLength;
+
+        }
+
 
 
     /**
@@ -17,7 +23,15 @@ class Problem {
     * 
     */
     letterCapitalize(str) {
-        return null;
+
+        // split the sentence in a string
+        const word = str.split(" ");
+
+        for (var i = 0, x = word.length; i < x; i++) {
+            word[i] = word[i][0].toUpperCase() + word[i].substr(1);
+        }
+    
+        return word.join(" ");
     }
 
 
@@ -29,9 +43,14 @@ class Problem {
      */
 
     firstReverse(input){
-        return null;
-    }
+       //split into string 
+       //reverse the order of the string
+      //put the string back together 
 
+    
+     return input.split('').reverse().join("");
+    }
+ 
     /**
      * Have the longestWord(String input) take the input parameter being passed and return the
      * largest word in the string. If there are two or more words that are the same length,
@@ -40,7 +59,18 @@ class Problem {
      */
     longestWord(input) {
         // code goes here
-        return null;
+        let stringWord = input.split(" ");
+        //create the varible to hold longst word in string
+    const sortedArry = stringWord.sort( (inputA, inputB) => {
+        return inputB.length - inputA.length;
+    }
+
+    )
+        //create a for loop to go through string
+        for( var i = 0; i < stringWord.length; i++){
+            if(stringWord[i].length > longest)
+            longest = stringWord[i].length;
+        }
     }
 
     /**
